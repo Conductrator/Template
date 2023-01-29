@@ -36,9 +36,10 @@ jobs:
       with:
         paths: ${{ github.workspace }}/target/site/jacoco/jacoco.xml
         token: ${{ secrets.GITHUB_TOKEN }}
-        min-coverage-overall: 10
-        min-coverage-changed-files: 10
         title: Code Coverage
+        update-comment: true
+        min-coverage-overall: 75
+        min-coverage-changed-files: 85
 
     - name: Save Coverage To Environment Variable
       run: |
